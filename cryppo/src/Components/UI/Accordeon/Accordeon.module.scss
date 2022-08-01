@@ -1,0 +1,63 @@
+@import "../../../Style/Mixins";
+.container {
+  transition: 0.38s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  height: auto;
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-left, 50px, 100px);
+  @include fluid(padding-right, 50px, 100px);
+  @include fluid(margin-bottom, 15px, 25px);
+}
+.containerOpen {
+  background: rgba(91, 91, 91, 0.2);
+  backdrop-filter: blur(100px);
+  border-radius: 30px;
+
+  @include fluid(padding-bottom, 15px, 25px);
+}
+
+.dropdown {
+  background: url("../../../Images/icon/dropdown.svg") no-repeat;
+  background-size: contain;
+  @include fluid(width, 12px, 15px);
+  @include fluid(height, 6px, 8px);
+  transition: 0.38s ease-in-out;
+  transform: rotate(0deg);
+  transform-origin: center;
+}
+.dropdownOpen {
+  background-image: url("../../../Images/icon/color-dropdown.svg");
+  transform: rotate(180deg);
+}
+.content {
+  color: #fff;
+  max-height: 0;
+  opacity: 0;
+  transition: 0.4s linear;
+  animation: close 1.5s;
+}
+.contentOpen {
+  animation: open 1s;
+  transition: 0.4s linear;
+  opacity: 1;
+  max-height: 100%;
+  @include fluid(margin-bottom, 15px, 35px);
+  @include fluid(margin-top, 10px, 25px);
+}
+.title {
+  @include fluid(font-size, 14px, 18px);
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+@media screen and(max-width:576px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

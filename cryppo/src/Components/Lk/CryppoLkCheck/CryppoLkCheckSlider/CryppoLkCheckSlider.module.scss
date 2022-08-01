@@ -1,0 +1,118 @@
+@import "../../../../Style/Mixins.scss";
+.container {
+  position: relative;
+}
+.card {
+  background: url("../../../../Images/icon/checkMask.png") no-repeat;
+  width: 100%;
+  background-size: cover;
+  z-index: 4;
+  border-radius: 15px;
+  @include fluid(padding-left, 30px, 60px);
+  @include fluid(padding-right, 30px, 60px);
+  @include fluid(padding-top, 20px, 35px);
+  @include fluid(padding-bottom, 20px, 35px);
+  @include fluid(margin-bottom, 40px, 60px);
+  min-height: 250px;
+}
+.cardBank {
+  background: linear-gradient(268.14deg, #2f69ff 0%, #162c64 99.82%);
+  width: 100%;
+  background-size: cover;
+  z-index: 4;
+  border-radius: 15px;
+  @include fluid(padding-left, 30px, 60px);
+  @include fluid(padding-right, 30px, 60px);
+  @include fluid(padding-top, 20px, 35px);
+  @include fluid(padding-bottom, 20px, 35px);
+  @include fluid(margin-bottom, 40px, 60px);
+  min-height: 250px;
+}
+.cardMiddle {
+  background: rgba(149, 149, 149, 0.3);
+  border-radius: 15px;
+  @include fluid(padding-left, 30px, 60px);
+  @include fluid(padding-right, 30px, 60px);
+  @include fluid(padding-top, 20px, 35px);
+  @include fluid(padding-bottom, 20px, 35px);
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  width: 95%;
+  z-index: 0;
+  transform: translate(-50%);
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cardLittle {
+  background: rgba(166, 166, 166, 0.1);
+  position: absolute;
+  top: 95px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: -1;
+  width: 90%;
+  border-radius: 15px;
+  @include fluid(padding-left, 30px, 60px);
+  @include fluid(padding-right, 30px, 60px);
+  @include fluid(padding-top, 20px, 35px);
+  @include fluid(padding-bottom, 20px, 35px);
+}
+.text {
+  font-size: 16px;
+  @include fluid(margin-bottom, 10px, 7px);
+}
+.value {
+  @include fluid(font-size, 22px, 28px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 20px, 35px);
+}
+.plus {
+  background: $purpleGradient;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  position: relative;
+  @include fluid(width, 45px, 65px);
+  @include fluid(height, 45px, 65px);
+  cursor: pointer;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    background-size: 100% 150%;
+  }
+  .icon {
+    content: "";
+    position: absolute;
+    @include fluid(width, 20px, 25px);
+    @include fluid(height, 20px, 25px);
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.bank {
+  @include fluid(width, 170px, 210px);
+  @include fluid(height, 100px, 140px);
+  background: #2f69ff;
+  box-shadow: 0px 2px 17px -3px rgba(64, 117, 255, 0.38);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  @include fluid(padding-left, 15px, 20px);
+  @include fluid(padding-right, 15px, 20px);
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+}
+.icon {
+  @include fluid(width, 40px, 60px);
+  @include fluid(height, 20px, 30px);
+  object-fit: contain;
+}
+.number {
+  @include fluid(font-size, 18px, 24px);
+  line-height: 79%;
+}

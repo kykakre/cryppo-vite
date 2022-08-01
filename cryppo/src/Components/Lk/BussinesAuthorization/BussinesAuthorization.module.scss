@@ -1,0 +1,93 @@
+@import "../../../Style/Mixins.scss";
+
+.entance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(91, 91, 91, 0.2);
+  border: 1px solid #545454;
+  backdrop-filter: blur(100px);
+  border-radius: 15px;
+  @include fluid(padding, 20px, 40px);
+  width: 50%;
+}
+.input {
+  input {
+    width: 40%;
+    @include fluid(font-size, 16px, 18px);
+    color: #fff;
+    @include fluid(padding-top, 10px, 15px);
+    @include fluid(padding-bottom, 10px, 15px);
+    @include fluid(padding-left, 10px, 15px);
+    @include fluid(padding-right, 10px, 15px);
+    border-radius: 15px;
+    backdrop-filter: blur(100px);
+  }
+}
+.title {
+  @include fluid(font-size, 32px, 48px);
+  font-weight: 600;
+  @include fluid(margin, 20px, 40px);
+}
+
+.button {
+  @include fluid(font-size, 16px, 18px);
+  border: none;
+  background: $purpleGradient;
+  @include fluid(margin-top, 20px, 35px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 5px, 10px);
+  @include fluid(padding-bottom, 5px, 10px);
+  border-radius: 15px;
+  @include fluid(margin-bottom, 10px, 15px);
+  cursor: pointer;
+}
+.link {
+  color: #fff;
+  @include fluid(font-size, 14px, 16px);
+  transition: 0.38s ease-in-out !important;
+  &hover {
+    color: $green !important;
+  }
+}
+.tabs {
+  @include fluid(padding, 20px, 45px);
+  background: rgba(91, 91, 91, 0.2);
+  border-radius: 15px;
+}
+.tabsItem {
+  marker: none;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  @include fluid(pudding, 10px, 15px);
+  border-radius: 15px;
+  width: 75%;
+  justify-content: space-between;
+}
+.tabsText {
+  marker: none;
+  background: #2d2d2d;
+  border-radius: 15px;
+  @include fluid(margin-right, 10px, 20px);
+  @include fluid(margin, 5px, 10px);
+  @include fluid(padding, 10px, 15px);
+  list-style-type: none;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and(max-width:576px) {
+  .modal {
+    width: 95%;
+  }
+}

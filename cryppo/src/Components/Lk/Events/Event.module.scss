@@ -1,0 +1,11 @@
+@import "../../../Style/Mixins.scss";
+
+.wrapper {
+  width: 65%;
+  margin-bottom: 30px;
+}
+@media screen and(max-width:768px) {
+  .wrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+@import '../../../Style/Mixins';
+
+.center {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url('../../../Images/content/zamok.svg') no-repeat;
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    &::before {
+        // content: '';
+        // border-radius: 50%;
+        // position: absolute;
+        // left: 50%;
+        // top: 50%;
+        // transform: translate(-50%, -50%) rotate(0deg);
+        // width: 70%;
+        // height: 70%;
+        // border: 20px inset rgba(0, 192, 169, 0.5);
+        // animation: rotate 15s infinite linear;
+    }
+}
+
+.atom {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(0, 192, 169, 0.5);
+    border: 1px solid rgba(0, 192, 169, 0.5);
+    animation: color 15s infinite linear;
+    backdrop-filter: blur(5px);
+}
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-50%, -50%) rotate(180deg);
+        border: 20px inset rgba(188, 47, 255, 0.5);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+@keyframes color {
+    0% {
+        background: rgba(0, 192, 169, 0.5);
+    }
+    50% {
+        background: rgba(188, 47, 255, 0.5);
+    }
+    100% {
+        background: rgba(0, 192, 169, 0.5);
+    }
+}

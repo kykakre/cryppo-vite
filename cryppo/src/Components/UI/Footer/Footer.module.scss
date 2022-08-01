@@ -1,0 +1,111 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+}
+.flex {
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(padding-bottom, 15px, 30px);
+  border-top: 1px solid #6d6d6d;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  @include fluid(margin-top, 15px, 25px);
+  a {
+    @include fluid(font-size, 12px, 14px);
+    @include fluid(margin-right, 20px, 50px);
+    transition: 0.38s ease-in-out;
+    color: #fff;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #00c0a9;
+    }
+  }
+}
+// .social {
+//     @include fluid(margin-top, 10px, 15px);
+// }
+.iconContainer {
+  @include fluid(margin-top, 10px, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone {
+  color: #fff;
+  transition: 0.38s ease-in-out;
+  padding-top: 3px;
+  &:hover {
+    color: #00c0a9;
+  }
+}
+
+.mail {
+  @include fluid(font-size, 12px, 14px);
+  color: #fff;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    color: #00c0a9;
+  }
+}
+.icon {
+  @include fluid(margin-right, 7px, 14px);
+  display: flex;
+  align-items: center;
+  img {
+    @include fluid(width, 15px, 20px);
+    @include fluid(height, 15px, 20px);
+    object-fit: contain;
+    transition: 0.38s ease-in-out;
+    &:hover {
+      filter: invert(63%) sepia(14%) saturate(6671%) hue-rotate(129deg)
+        brightness(90%) contrast(102%);
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+  }
+  .iconContainer {
+    justify-content: flex-start;
+  }
+  .social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .wrapper {
+    margin-bottom: 15px;
+  }
+  .mail {
+    margin-bottom: 10px;
+  }
+  .phone {
+    margin-bottom: 15px;
+  }
+  .icon {
+    margin-left: 15px;
+    margin-right: 15px;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  .flex {
+    padding-bottom: 30px;
+  }
+}

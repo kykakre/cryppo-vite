@@ -1,0 +1,24 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  max-width: 1430px;
+  @include fluid(margin-bottom, 70px, 170px);
+}
+.wrapper {
+  @include container;
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  span {
+    color: #2f69ff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conatiner {
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,173 @@
+@import "../../../Style/Mixins";
+.block {
+  background: rgba(91, 91, 91, 0.2);
+  border: 1px solid #545454;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(100px);
+  border-radius: 15px;
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-bottom, 15px, 25px);
+}
+.line {
+  @include fluid(padding-left, 17px, 27px);
+  @include fluid(padding-right, 15px, 25px);
+  @include fluid(margin-bottom, 15px, 27px);
+  @include fluid(padding-top, 2px, 3px);
+  @include fluid(padding-bottom, 2px, 3px);
+  transition: 0.38s ease-in-out;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    height: 100%;
+    top: 0;
+    width: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(45, 45, 45, 0.8) 0%,
+      rgba(45, 45, 45, 0) 100%
+    );
+    transition: 0.38s ease-in-out;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+.icon {
+  object-fit: contain;
+  @include fluid(width, 25px, 40px);
+  @include fluid(height, 25px, 40px);
+  @include fluid(margin-right, 10px, 15px);
+}
+.valute {
+  display: flex;
+  align-items: center;
+}
+.text {
+  @include fluid(font-size, 14px, 16px);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.availability {
+  @include fluid(font-size, 14px, 16px);
+  font-weight: 400;
+  margin-bottom: 2px;
+  word-break: break-all;
+  text-align: right;
+}
+.prise {
+  color: #6d6d6d;
+  @include fluid(font-size, 10px, 12px);
+}
+.item {
+  @include fluid(margin-bottom, 15px, 35px);
+}
+.drop {
+  background: url("../../../Images/drop.svg") no-repeat;
+  @include fluid(width, 5px, 8px);
+  @include fluid(height, 8px, 11px);
+  background-size: contain;
+  @include fluid(padding-right, 12px, 30px);
+}
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  @include fluid(padding-left, 20px, 45px);
+}
+.cardLine {
+  display: flex;
+  flex-direction: column;
+}
+.bankText {
+  @include fluid(font-size, 10px, 12px);
+}
+.cart {
+  display: flex;
+  align-items: flex-end;
+  background: #2f69ff;
+  border-radius: 8px;
+  @include fluid(padding-left, 3px, 5px);
+  @include fluid(padding-right, 3px, 5px);
+}
+.cartLine {
+  display: flex;
+  flex-direction: column;
+}
+.last {
+  display: flex;
+  align-items: baseline;
+}
+.number {
+  @include fluid(font-size, 9px, 11px);
+  @include fluid(margin-right, 3px, 8px);
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  z-index: 2;
+}
+.column {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.cardDown {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  transform: scale(1);
+}
+.cart {
+  @include fluid(margin-bottom, 10px, 15px);
+  @include fluid(margin-right, 15px, 30px);
+  cursor: pointer;
+  transition: 0.38s ease-in-out;
+  &:nth-child(2n) {
+    background: #39e1cc;
+    margin-bottom: 0;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+.modalWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include fluid(padding-top, 30px, 60px);
+  @include fluid(padding-left, 35px, 70px);
+  @include fluid(padding-right, 35px, 70px);
+  @include fluid(padding-bottom, 30px, 60px);
+  background: #2d2d2d;
+  border-radius: 12px;
+}
+.btn {
+  display: block;
+  color: #fff;
+  width: fit-content;
+  @include fluid(font-size, 12px, 14px);
+  @include fluid(padding-top, 8px, 10px);
+  @include fluid(padding-bottom, 8px, 10px);
+  @include fluid(padding-left, 30px, 50px);
+  @include fluid(padding-right, 30px, 50px);
+  background: $purpleGradient;
+  background-size: 150% 100%;
+  box-shadow: 0px 0px 20px rgba(47, 105, 255, 0.38);
+  border-radius: 8px;
+  transition: 0.38s ease-in-out;
+  margin: auto;
+  &:hover {
+    background-size: 100% 100%;
+    color: #fff;
+  }
+}

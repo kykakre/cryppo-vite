@@ -1,0 +1,200 @@
+@import "../../../Style/Mixins.scss";
+.dataPay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(padding-bottom, 15px, 30px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  color: #fff;
+  background: #2d2d2d;
+  @include fluid(font-size, 10px, 12px);
+  @include fluid(margin-bottom, 10px, 15px);
+  border-radius: 12px;
+  right: auto;
+  bottom: auto;
+}
+
+.icon {
+  @include fluid(width, 45px, 75px);
+  @include fluid(height, 45px, 75px);
+  object-fit: contain;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.firm {
+  @include fluid(margin-bottom, 8px, 10px);
+  @include fluid(font-size, 14px, 16px);
+}
+.type {
+  color: #6d6d6d;
+  @include fluid(font-size, 12px, 14px);
+  @include fluid(margin-bottom, 30px, 80px);
+}
+.cash {
+  @include fluid(font-size, 28px, 48px);
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drop {
+  background: url("../../../Images/drop.svg") no-repeat;
+  @include fluid(width, 5px, 8px);
+  @include fluid(height, 8px, 11px);
+  background-size: contain;
+  @include fluid(padding-right, 12px, 45px);
+}
+.cardLine {
+  display: flex;
+}
+.bankText {
+  @include fluid(font-size, 12px, 14px);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 40px, 80px);
+}
+.last {
+  display: flex;
+  align-items: baseline;
+  @include fluid(padding-left, 15px, 20px);
+}
+.line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.current {
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 15px, 25px);
+}
+.crypto {
+  display: flex;
+  align-items: center;
+  @include fluid(margin-right, 40px, 80px);
+}
+.cryptoIcon {
+  @include fluid(width, 30px, 50px);
+  @include fluid(height, 30px, 50px);
+  object-fit: contain;
+  @include fluid(margin-right, 10px, 20px);
+}
+.currencyPay {
+  @include fluid(font-size, 14px, 18px);
+}
+.check {
+  @include fluid(font-size, 10px, 14px);
+}
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.number {
+  @include fluid(font-size, 10px, 12px);
+  @include fluid(margin-right, 5px, 10px);
+}
+.cardLine {
+  display: flex;
+  align-items: center;
+  @include fluid(padding-left, 3px, 6px);
+  @include fluid(padding-right, 3px, 6px);
+  @include fluid(padding-bottom, 2px, 5px);
+  @include fluid(padding-top, 15px, 25px);
+  justify-content: flex-end;
+  background: #2f69ff;
+  border-radius: 8px;
+}
+.logo {
+  @include fluid(width, 4px, 15px);
+  @include fluid(height, 4px, 8px);
+  object-fit: contain;
+  background-position: bottom;
+}
+.iconStatus {
+  @include fluid(width, 10px, 16px);
+  @include fluid(height, 10px, 16px);
+  border-radius: 50%;
+  @include fluid(margin-right, 10px, 15px);
+}
+.textStatus {
+  @include fluid(font-size, 12px, 14px);
+  color: #6d6d6d;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include fluid(padding-top, 30px, 60px);
+  @include fluid(padding-left, 35px, 70px);
+  @include fluid(padding-right, 35px, 70px);
+  @include fluid(padding-bottom, 30px, 60px);
+  background: #2d2d2d;
+  border-radius: 12px;
+}
+.btn {
+  display: block;
+  color: #fff;
+  font-size: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: linear-gradient(140.58deg, #2e69ff 13.96%, #bc2fff 82.99%);
+  background-size: 150% 100%;
+  box-shadow: 0px 0px 20px rgba(47, 105, 255, 0.38);
+  border-radius: 8px;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    background-size: 100% 100%;
+  }
+}
+.wrapperBusiness {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include fluid(padding-top, 30px, 60px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-bottom, 30px, 60px);
+  background: #2d2d2d;
+  border-radius: 12px;
+}
+.none {
+  display: none;
+}
+.close {
+  position: absolute;
+  background: url("../../../Images/icon/close.svg") no-repeat;
+  @include fluid(width, 10px, 16px);
+  @include fluid(height, 10px, 16px);
+  background-size: cover;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(padding-bottom, 15px, 30px);
+  border-radius: 12px;
+  @include fluid(margin-bottom, 5px, 15px);
+  background: #2d2d2d;
+}

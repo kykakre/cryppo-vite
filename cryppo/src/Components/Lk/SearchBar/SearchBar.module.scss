@@ -1,0 +1,122 @@
+@import "../../../Style/Mixins.scss";
+
+.container {
+  @include fluid(margin-bottom, 30px, 60px);
+}
+.block {
+  @include neumorphism;
+  @include fluid(padding-top, 20px, 30px);
+  @include fluid(padding-bottom, 20px, 30px);
+  @include fluid(padding-left, 25px, 50px);
+  @include fluid(padding-right, 25px, 50px);
+  border-radius: 15px;
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.calendar {
+  display: flex;
+  flex-direction: row;
+  height: 31px;
+  background: #2d2d2d;
+  border-radius: 76px;
+  @include fluid(margin-left, 25px, 50px);
+  @include fluid(margin-right, 25px, 50px);
+}
+.flex {
+  @include flex;
+  flex-grow: 1;
+  @include fluid(margin-right, 15px, 30px);
+}
+.button {
+  @include fluid(padding-left, 10px, 25px);
+  @include fluid(padding-right, 10px, 25px);
+  background: #2d2d2d;
+  cursor: pointer;
+  border: none;
+}
+.buttonLeft {
+  border-radius: 76px 0 0 76px;
+}
+.buttonRight {
+  border-radius: 0 76px 76px 0;
+}
+.calendarInput {
+  position: relative;
+  @include fluid(padding-left, 10px, 25px);
+  @include fluid(padding-right, 10px, 25px);
+  background: #2d2d2d;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+}
+.input {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  @include fluid(margin-left, 10px, 20px);
+  align-items: center;
+}
+.inputItem {
+  height: 20px;
+  letter-spacing: 0.02em;
+  color: #6d6d6d;
+  line-height: 19px;
+  width: 100%;
+  background: none;
+  border: none;
+}
+.dropdownWrapper {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+}
+.dropdownItem {
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+}
+.tag {
+  display: flex;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 5px 5px 5px;
+  align-items: center;
+  background-color: #6d6d6d;
+  border-radius: 5px;
+}
+
+.picker {
+  background: #2d2d2d;
+  border-radius: 10px;
+  border: 1px solid #545454;
+  @include fluid(margin-right, 15px, 35px);
+  svg {
+    fill: #fff;
+  }
+  &:hover {
+    border: 1px solid $green;
+  }
+}
+.dropdown {
+  background: #2d2d2d;
+  color: white;
+}
+@media screen and(max-width:768px) {
+  .flex {
+    flex-direction: column;
+  
+  }
+  .block {
+    height: 100%;
+    img {
+      display: none;
+    }
+  }
+  .input {
+    margin-top: 20px;
+    margin-left: 0;
+    width:100%;
+  }
+}

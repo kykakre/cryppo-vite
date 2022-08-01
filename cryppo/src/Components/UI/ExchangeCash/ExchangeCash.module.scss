@@ -1,0 +1,148 @@
+@import "../../../Style/Mixins.scss";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.linkItem {
+  text-decoration: underline !important;
+  color: #bdbdbd !important;
+  @include fluid(font-size, 12px, 14px);
+  @include fluid(margin-right, 15px, 30px);
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: $green !important;
+  }
+}
+.linkItem {
+  text-decoration: underline !important;
+  color: #bdbdbd !important;
+  @include fluid(font-size, 12px, 14px);
+  @include fluid(margin-right, 15px, 30px);
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: $green !important;
+  }
+}
+.container {
+  background: #2d2d2d;
+  border-radius: 12px;
+  @include fluid(padding, 20px, 40px);
+  position: relative;
+}
+.titleModal {
+  @include fluid(font-size, 18px, 22px);
+  text-align: center;
+  @include fluid(margin-bottom, 20px, 30px);
+  font-weight: 500;
+}
+.subtitleModal {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+  @include fluid(margin-top, 10px, 15px);
+}
+.btnModal {
+  border: none;
+  border-radius: 12px;
+  background: $purpleGradient;
+  width: 100%;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-top, 30px, 40px);
+  cursor: pointer;
+}
+.close {
+  @include fluid(width, 10px, 20px);
+  @include fluid(height, 10px, 20px);
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.containerModal {
+  background: #2d2d2d;
+  border-radius: 12px;
+  @include fluid(padding, 20px, 40px);
+  position: relative;
+}
+.itemContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  @include fluid(padding-top, 10px, 20px);
+}
+.bottom {
+  border-top: 1px solid #424242;
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(margin-top, 10px, 20px);
+}
+.item {
+  width: 48%;
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.comission {
+  @include fluid(font-size, 8px, 10px);
+  color: #6d6d6d;
+}
+.itemFull {
+  width: 100%;
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.title {
+  @include fluid(margin-bottom, 5px, 10px);
+  @include fluid(font-size, 12px, 14px);
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.subtitle {
+  color: #6d6d6d;
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.text {
+  @include fluid(font-size, 12px, 14px);
+  color: #40ffe8;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 10px, 20px);
+}
+.option {
+  color: #6d6d6d;
+}
+.input {
+  width: 100%;
+  border: 1px solid #424242;
+  border-radius: 76px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #fff;
+  background: rgba(91, 91, 91, 0.2);
+  outline: none;
+}
+.close {
+  @include fluid(width, 10px, 20px);
+  @include fluid(height, 10px, 20px);
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+@media screen and(max-width:768px) {
+  .itemContent {
+    flex-direction: column;
+    align-items: center;
+  }
+  .item {
+    width: 100%;
+  }
+}

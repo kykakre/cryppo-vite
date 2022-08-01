@@ -1,0 +1,64 @@
+@import "../../../Style/Mixins";
+
+.block {
+  background: rgba(91, 91, 91, 0.2);
+  border: 1px solid #545454;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(100px);
+  @include fluid(padding-left, 30px, 60px);
+  @include fluid(padding-right, 30px, 60px);
+  @include fluid(padding-top, 20px, 40px);
+  @include fluid(padding-bottom, 20px, 40px);
+  @include fluid(margin-bottom, 120px, 165px);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item {
+  width: 48%;
+  background: #2d2d2d;
+  border-radius: 15px;
+  @include fluid(padding-left, 25px, 45px);
+  @include fluid(padding-top, 20px, 35px);
+  @include fluid(padding-bottom, 20px, 35px);
+  cursor: pointer;
+  @include fluid(margin-bottom, 10px, 20px);
+  box-shadow: 0px 7px 12px 7px rgba(0, 0, 0, 0);
+  transition: 0.38s ease-in-out;
+  &:hover {
+    margin-top: -5px;
+    @include fluid(margin-bottom, 15px, 25px);
+    box-shadow: 0px 7px 12px 7px rgba(0, 0, 0, 0.25);
+  }
+}
+.title {
+  @include fluid(font-size, 18px, 24px);
+  font-weight: 500;
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.subtitle {
+  @include fluid(font-size, 12px, 14px);
+  @include fluid(margin-bottom, 20px, 35px);
+  width: 80%;
+}
+.list {
+  padding-left: 15px;
+  li {
+    color: #6d6d6d;
+    @include fluid(font-size, 12px, 14px);
+    &::marker {
+      position: relative;
+      @include fluid(font-size, 20px, 24px);
+      color: #2f69ff;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .item {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,111 @@
+@import "../../../Style/Mixins";
+
+.container {
+  align-items: center;
+  justify-content: space-between;
+  &:hover {
+    .text {
+      height: fit-content;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.text {
+  @include fluid(margin-bottom, 42px, 50px);
+}
+.wrapperIndex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.index {
+  width: 44%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include fluid(margin-bottom, 15px, 30px);
+  img {
+    @include fluid(width, 20px, 35px);
+    @include fluid(height, 20px, 35px);
+    object-fit: contain;
+    @include fluid(margin-right, 10px, 20px);
+  }
+}
+.name {
+  @include fluid(font-size, 14px, 16px);
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.cash {
+  @include fluid(font-size, 10px, 12px);
+  color: #6d6d6d;
+}
+.titleIndex {
+  @include fluid(margin-right, 25px, 45px);
+}
+.bar {
+  @include fluid(width, 75px, 92px);
+  @include fluid(height, 5px, 7px);
+  background: #2d2d2d;
+  border-radius: 150px;
+  position: relative;
+  @include fluid(margin-right, 10px, 17px);
+}
+.activeBar {
+  position: absolute;
+  @include fluid(height, 5px, 7px);
+  top: 0;
+  border-radius: 150px;
+  left: 0;
+}
+.percent {
+  display: flex;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include fluid(font-size, 10px, 12px);
+  color: #fff;
+  width: 16%;
+  @include fluid(padding-top, 2px, 5px);
+  @include fluid(padding-bottom, 2px, 5px);
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+}
+@media screen and (max-width: 992px) {
+  .wrapperIndex {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .index {
+    width: 80%;
+  }
+  .bar {
+    width: 120px;
+  }
+}
+@media screen and(max-width:768px) {
+  .index {
+    width: 100%;
+  }
+  .bar {
+    width: 140px;
+  }
+}
+@media screen and(max-width:576px) {
+  .bar {
+    width: 85px;
+  }
+}

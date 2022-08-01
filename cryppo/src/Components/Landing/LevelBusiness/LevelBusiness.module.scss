@@ -1,0 +1,33 @@
+@import "../../../Style/Mixins";
+
+.flex {
+  @include container();
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.img {
+  @include fluid(width, 350px, 656px);
+  @include fluid(height, 250px, 535px);
+  object-fit: cover;
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  width: 36%;
+  span {
+    color: #2f69ff;
+  }
+}
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+}
+.subtitle {
+  width: 100%;
+}

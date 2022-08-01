@@ -1,0 +1,60 @@
+@import "../../../Style/Mixins";
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  transition: 0.38s ease-in-out;
+  @include neumorphism;
+  border-radius: 15px;
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-bottom, 10px, 25px);
+  @include fluid(padding-right, 10px, 25px);
+  @include fluid(margin-bottom, 20px, 35px);
+  cursor: pointer;
+  box-shadow: 0px 9px 25px 2px rgba(151, 149, 149, 0),
+    inset 0px 0px 10px 2px rgba(0, 0, 0, 0);
+  &:hover {
+    box-shadow: 0px 9px 25px 2px rgba(151, 149, 149, 0.25),
+      inset 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+    .text {
+      height: fit-content;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+.icon {
+  @include fluid(width, 12px, 17px);
+  @include fluid(height, 12px, 17px);
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  background: #6d6d6d;
+  @include fluid(width, 30px, 40px);
+  @include fluid(height, 30px, 40px);
+  @include fluid(margin-right, 10px, 15px);
+  border-radius: 50%;
+  position: relative;
+}
+.title {
+  @include fluid(font-size, 12px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.text {
+  @include fluid(font-size, 10px, 12px);
+  @include fluid(margin-bottom, 5px, 10px);
+  transition: 0.38s ease-in-out;
+}
+.wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+.povered {
+  @include fluid(font-size, 10px, 12px);
+}

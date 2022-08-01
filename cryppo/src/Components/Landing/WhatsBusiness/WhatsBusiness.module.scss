@@ -1,0 +1,73 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  position: relative;
+  @include fluid(margin-bottom, 50px, 70px);
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include fluid(margin-bottom, 50px, 80px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .text {
+    width: 42%;
+    @include fluid(padding-top, 7px, 13px);
+    p {
+      @include fluid(font-size, 14px, 18px);
+      line-height: 150%;
+      padding-bottom: 3px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  @include fluid(margin-right, 35px, 70px);
+  span {
+    color: #2f69ff;
+  }
+}
+
+.parallax {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: -30%;
+  transform: translate(-50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(47, 105, 255, 0.4) 0%,
+    rgba(47, 105, 255, 0) 100%
+  );
+  width: 100%;
+  @include fluid(height, 800px, 1000px);
+}
+@media screen and(max-width:992px) {
+  .item {
+    flex-direction: column;
+  }
+  .text {
+    width: 100% !important;
+  }
+  .subtitle {
+    width: 100%;
+  }
+  .parallax {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conatiner {
+    margin-bottom: 30px;
+  }
+}

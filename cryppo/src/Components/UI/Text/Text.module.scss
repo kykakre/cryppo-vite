@@ -1,0 +1,12 @@
+@import "../../../Style/Mixins";
+
+.text {
+  color: #fff;
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 35px, 55px);
+}
+@media screen and (max-width: 768) {
+  .text {
+    text-align: center;
+  }
+}

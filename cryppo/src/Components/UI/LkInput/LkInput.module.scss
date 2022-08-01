@@ -1,0 +1,17 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include fluid(margin-bottom, 5px, 10px);
+
+  width: 100%;
+}
+.input {
+  background: #2c2c2c;
+  width: 100%;
+
+  border-radius: 10px;
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(font-size, 12px, 16px);
+}

@@ -1,0 +1,135 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  @include fluid(max-width, 1230px, 1430px);
+  @include fluid(margin-bottom, 50px, 210px);
+  @include fluid(padding-top, 30px, 50px);
+  @include fluid(padding-left, 50px, 120px);
+  @include fluid(padding-right, 50px, 120px);
+  @include neumorphism;
+  position: relative;
+}
+.animate {
+  position: relative;
+}
+.img {
+  position: relative;
+  z-index: 3;
+  object-fit: cover;
+}
+.flex {
+  display: flex;
+
+  align-items: center;
+}
+.block {
+  width: 60%;
+}
+.id {
+  background: #2f69ff;
+  @include fluid(height, 40px, 66px);
+  @include fluid(width, 40px, 66px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include fluid(margin-right, 15px, 30px);
+  font-weight: 500;
+  @include fluid(font-size, 18px, 22px);
+  flex-shrink: 0;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.item {
+  @include fluid(margin-bottom, 25px, 50px);
+}
+.text {
+  @include fluid(font-size, 16px, 18px);
+}
+.list {
+  @include fluid(margin-top, 30px, 60px);
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  span {
+    color: #2f69ff;
+  }
+}
+.parallax {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 50%;
+  top: 0;
+  // transform: translate(-50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(47, 105, 255, 0.8) 0%,
+    rgba(47, 105, 255, 0) 100%
+  );
+  @include fluid(width, 1000px, 1000px);
+  @include fluid(height, 1000px, 1000px);
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1230px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+  .block {
+    width: 100%;
+  }
+  .animate {
+    width: 100%;
+  }
+  .img {
+    width: 600px;
+    object-fit: contain;
+  }
+  .animate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .parallax {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conatiner {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 95%;
+  }
+  .wrapper {
+    flex-direction: column;
+  }
+  .id {
+    margin-bottom: 10px;
+  }
+  .text {
+    text-align: center;
+  }
+  .img {
+    width: 300px;
+  }
+  .subtitle {
+    text-align: center;
+  }
+}

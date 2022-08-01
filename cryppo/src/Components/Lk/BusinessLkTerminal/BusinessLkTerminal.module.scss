@@ -1,0 +1,190 @@
+@import "../../../Style/Mixins.scss";
+.card {
+  width: 100%;
+  border-radius: 15px;
+  transition: 0.38s ease-in-out;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(margin-bottom, 15px, 30px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.connected {
+  background: $blueGradient;
+  transition: 0.38s ease-in-out;
+  background-size: 100% 100%;
+  &:hover {
+    background-size: 150% 100%;
+  }
+}
+.exit {
+  opacity: 1;
+  transition: opacity 0.38s ease-in-out;
+}
+.exit-active {
+  opacity: 0 !important;
+}
+.notConnected {
+  background: $redGradient;
+  transition: 0.38s ease-in-out;
+  background-size: 100% 100%;
+  &:hover {
+    background-size: 150% 100%;
+  }
+}
+.add {
+  @include fluid(font-size, 14px, 16px);
+  background: $purpleGradient;
+  transition: 0.38s ease-in-out;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 5px, 16px);
+  @include fluid(padding-bottom, 5px, 16px);
+  cursor: pointer;
+  &:hover {
+    background-size: 150% 100%;
+  }
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 10px, 20px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.title {
+  @include fluid(font-size, 18px, 22px);
+  font-weight: 700;
+}
+.text {
+  @include fluid(font-size, 14px, 16px);
+}
+.link {
+  @include fluid(font-size, 12px, 14px);
+  color: #fff;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #fff;
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: #00c0a9;
+    border-bottom: 1px solid #00c0a9;
+  }
+}
+
+.container {
+  background: #2d2d2d;
+  border-radius: 12px;
+  @include fluid(padding, 20px, 40px);
+  position: relative;
+}
+.containerSearch {
+  background: rgba(91, 91, 91, 0.2);
+  border-radius: 15px;
+  @include fluid(padding-left, 15px, 60px);
+  @include fluid(padding-right, 15px, 60px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  @include fluid(margin-right, 10px, 20px);
+}
+.null {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include fluid(font-size, 22px, 28px);
+  font-weight: 600;
+  @include fluid(padding-top, 40px, 80px);
+  @include fluid(padding-bottom, 40px, 80px);
+}
+.icon {
+  @include fluid(width, 10px, 15px);
+  @include fluid(height, 10px, 15px);
+  object-fit: contain;
+  @include fluid(margin-right, 10px, 15px);
+}
+.subtitle {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+  @include fluid(margin-top, 10px, 15px);
+}
+.btn {
+  border: none;
+  border-radius: 12px;
+  background: $purpleGradient;
+  width: 100%;
+  cursor: pointer;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-top, 15px, 30px);
+}
+
+.close {
+  @include fluid(width, 10px, 20px);
+  @include fluid(height, 10px, 20px);
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.input {
+  background: #2c2c2c;
+  border-radius: 10px;
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(font-size, 12px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+  height:44px;
+}
+.inputSearch {
+  font-family: "Cera Pro";
+  background: none;
+  border: none;
+  @include fluid(font-size, 10px, 12px);
+  color: #6d6d6d;
+  flex-grow:1;
+
+  outline: none;
+  &:active {
+    border: none;
+  }
+}
+@media screen and(max-width:768px){
+  .flex{
+    margin-bottom:30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .flex {
+    flex-direction: column;
+    align-items: baseline;
+    margin-bottom: 20px;
+  }
+  .containerSearch {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .link {
+    margin-bottom: 10px;
+  }
+  .inputSearch {
+    font-size: 14px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+}

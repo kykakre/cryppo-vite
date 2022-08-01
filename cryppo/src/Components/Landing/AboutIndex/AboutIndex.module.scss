@@ -1,0 +1,208 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  @include fluid(margin-bottom, 70px, 170px);
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.block {
+  width: 45%;
+}
+.content {
+  position: relative;
+  width: 50%;
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  width: 36%;
+  span {
+    color: #2f69ff;
+  }
+}
+.gradient {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  @include fluid(width, 200px, 300px);
+  @include fluid(height, 200px, 300px);
+  background: linear-gradient(140.58deg, #2f69ff 13.96%, #bc2fff 82.99%);
+  filter: blur(24px);
+}
+.index {
+  @include block;
+  position: absolute;
+  left: 15%;
+  top: -15%;
+  h3 {
+    @include fluid(padding-top, 5px, 10px);
+    @include fluid(font-size, 16px, 20px);
+  }
+  p {
+    @include fluid(font-size, 24px, 50px);
+    @include fluid(padding-bottom, 5px, 10px);
+  }
+}
+.coin {
+  @include block;
+  @include fluid(padding-right, 50px, 80px);
+  position: absolute;
+  left: 5%;
+  bottom: -15%;
+}
+.coinImg {
+  @include fluid(padding-right, 50px, 80px);
+  position: absolute;
+  left: 5%;
+  bottom: -15%;
+}
+.chartImg {
+  width: 255px;
+  position: absolute;
+  right: 0;
+  top: -10%;
+  height: 270px;
+}
+.barImg {
+  width: 255px;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+}
+.coinBlock {
+  @include flex;
+  @include fluid(margin-bottom, 15px, 30px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  img {
+    @include fluid(width, 30px, 44px);
+    @include fluid(height, 30px, 44px);
+    object-fit: contain;
+    @include fluid(margin-right, 10px, 15px);
+  }
+}
+.coinItem {
+  h4 {
+    @include fluid(font-size, 12px, 18px);
+    line-height: 0.5;
+  }
+  p {
+    @include fluid(font-size, 14px, 24px);
+  }
+}
+.bar {
+  @include block;
+  width: 255px;
+  position: absolute;
+  right: 0;
+  bottom: -50px;
+}
+.barBlock {
+  @include flex;
+  justify-content: space-between;
+  @include fluid(margin-bottom, 10px, 20px);
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.barItem {
+  background: rgba(84, 84, 84, 0.5);
+  border-radius: 40px;
+  position: relative;
+  width: 65%;
+  @include fluid(height, 6px, 8px);
+}
+.barValue {
+  position: absolute;
+  border-radius: 40px;
+  transition: 0.38s ease-in-out;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: $blueGradient;
+}
+.barWrapper {
+  background: $blueGradient;
+  border-radius: 5px;
+  width: 25%;
+  text-align: center;
+  @include fluid(padding-top, 1px, 3px);
+  @include fluid(padding-bottom, 1px, 3px);
+  @include fluid(padding-left, 8px, 13px);
+  @include fluid(padding-right, 8px, 13px);
+}
+.chart {
+  @include block;
+  width: 255px;
+  position: absolute;
+  right: 0;
+  top: -10%;
+  height: 270px;
+}
+
+@media screen and (max-width: 992px) {
+  .flex {
+    flex-direction: column;
+  }
+  .block {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .gradient {
+    z-index: -1;
+  }
+  .index {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    position: unset;
+  }
+  .coinImg {
+    position: unset;
+    padding-bottom: 40px;
+  }
+  .chartImg {
+    top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .subtitle {
+    width: 100%;
+  }
+  .container {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .chartImg {
+    position: relative;
+    display: none;
+  }
+  .barImg {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 15px;
+    display: none;
+  }
+  .coinImg {
+    margin-top: 15px;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+  }
+}

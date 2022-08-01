@@ -1,0 +1,239 @@
+@import "../../../Style/Mixins.scss";
+
+.btnContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.btn {
+  background: #424242;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  height: 40px;
+  color: #c4c4c4;
+  font-size: 16px;
+  transition: 0.38s ease-in-out;
+  margin-right: 5px;
+  transition: 0.38s ease-in-out;
+  width: 30%;
+}
+.tab {
+  list-style: none;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 3px, 5px);
+  @include fluid(padding-bottom, 3px, 5px);
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.38s linear;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    background: $purpleGradient;
+  }
+  div {
+    @include fluid(font-size, 10px, 12px);
+    color: #6d6d6d;
+    transition: 0.38s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+}
+.activeTab {
+  &::before {
+    opacity: 1;
+    width: 100%;
+  }
+  div {
+    color: #ffffff;
+  }
+}
+.active {
+  width: 70%;
+  color: #fff;
+  background: #1fc530;
+}
+.noactive {
+  width: 70%;
+  color: #fff;
+  background: #ff4a4a;
+}
+.container {
+  @include fluid(margin-top, 20px, 50px);
+  display: flex;
+  justify-content: space-between;
+}
+.block {
+  width: 48%;
+}
+.blockMin {
+  width: 48%;
+}
+.content {
+  background: rgba(91, 91, 91, 0.2);
+  border: 1px solid #545454;
+  backdrop-filter: blur(100px);
+  border-radius: 15px;
+  @include fluid(padding, 10px, 20px);
+  @include fluid(margin-bottom, 20px, 40px);
+}
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  transition: 0.38s ease-in-out;
+}
+.text {
+  font-family: "Cera Pro";
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 15px;
+  transition: 0.38s ease-in-out;
+  a {
+    text-decoration: underline !important;
+    color: #2f69ff !important;
+    transition: 0.38s ease-in-out;
+    &:hover {
+      color: $green !important;
+    }
+  }
+}
+.contentItem {
+  @include fluid(padding-bottom, 15px, 30px);
+  @include fluid(margin-bottom, 10px, 20px);
+  border-bottom: 1px solid #545454;
+  &:last-child {
+    border: none;
+  }
+}
+.list {
+  display: flex;
+  border: 1px solid #6d6d6d;
+  width: fit-content;
+  border-radius: 1000px;
+  @include fluid(margin-top, 20px, 40px);
+  @include fluid(margin-bottom, 20px, 40px);
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(padding-right, 10px, 20px);
+  @include fluid(padding-top, 5px, 10px);
+  @include fluid(padding-bottom, 5px, 10px);
+}
+.info {
+  display: flex;
+}
+.infoIcon {
+  background: url("../../../Images/warning.svg") no-repeat;
+  @include fluid(width, 15px, 25px);
+  @include fluid(height, 15px, 25px);
+  background-size: contain;
+  @include fluid(margin-right, 10px, 20px);
+}
+.infoText {
+  font-size: 14px;
+  color: #5d5d5d;
+}
+.line {
+  display: flex;
+  align-items: center;
+  background: #2d2d2d;
+  @include fluid(padding-top, 3px, 5px);
+  @include fluid(padding-bottom, 3px, 5px);
+  margin-bottom: 7px;
+  @include fluid(padding-left, 3px, 5px);
+  @include fluid(padding-right, 3px, 5px);
+  border-radius: 15px;
+}
+.item {
+  width: 20%;
+  @include fluid(font-size, 10px, 12px);
+  padding-left: 5px;
+  &:last-child {
+    color: $green;
+  }
+}
+.headerItem {
+  width: 20%;
+  @include fluid(font-size, 10px, 12px);
+  padding-left: 5px;
+}
+.itemMax {
+  width: 40%;
+  @include fluid(font-size, 10px, 12px);
+}
+.header {
+  display: flex;
+  align-items: center;
+}
+.headerItem {
+  @include fluid(font-size, 12px, 14px);
+}
+.headerItemMax {
+  width: 40%;
+  padding-left: 5px;
+}
+.close {
+  background: url("../../../Images/del.svg") no-repeat;
+  @include fluid(width, 10px, 15px);
+  @include fluid(height, 10px, 15px);
+  @include fluid(margin-left, 15px, 30px);
+  background-size: contain;
+  cursor: pointer;
+}
+@media screen and(max-width:768px) {
+  .container {
+    flex-direction: column;
+  }
+  .blockMin {
+    width: 100%;
+  }
+  .content{
+    margin-bottom:30px;
+  }
+  .block {
+    width: 100%;
+  }
+  .btnContainer {
+    width: 100%;
+  }
+  .btn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .line {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .header {
+    display: none;
+  }
+  .item {
+    width: 100%;
+    text-align: center;
+  }
+  .itemMax {
+    text-align: center;
+    width: 100%;
+  }
+  .close {
+    margin-left: 0;
+    width: 15px;
+    height: 15px;
+  }
+}

@@ -1,0 +1,32 @@
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.chartInner {
+  flex-grow: 1;
+  position: relative;
+  width: 40%;
+}
+@media screen and(max-width:1120px) {
+  .flex {
+    flex-direction: column;
+  }
+  .items {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .chartInner {
+    width: 70%;
+  }
+}
+@media screen and (max-width:768px){
+  .chartInner{
+    width:100%;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../../Style/Mixins";
+
+.switch {
+  width: 58px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 1px rgba(255, 255, 255, 0.24),
+    inset 0px 1px 1px rgba(0, 0, 0, 0.14);
+  border-radius: 22px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.38s ease-in-out;
+  z-index: 999;
+}
+
+.colorMode {
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 23px;
+  height: 23px;
+  background: linear-gradient(91.42deg, #2f69ff 0%, #bc2fff 100%);
+  border-radius: 50%;
+  transition: 0.38s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    background-image: url("../../../Images/icon/sun.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.38s ease-in-out;
+    content: "";
+    width: 13px;
+    height: 13px;
+  }
+}
+.dark {
+  background: #2d2d2d;
+  //   box-shadow: 0px 0px 10px rgba(47, 105, 255, 0.9);
+  .colorMode {
+    left: calc(100% - 25px);
+    background: linear-gradient(91.42deg, #2f69ff 0%, #bc2fff 100%);
+    &::before {
+      background-image: url("../../../Images/icon/moon.svg");
+    }
+  }
+}

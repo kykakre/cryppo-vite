@@ -1,0 +1,106 @@
+@import "../../../Style/Mixins.scss";
+.containerSearch {
+  background: rgba(91, 91, 91, 0.2);
+  border-radius: 15px;
+  @include fluid(padding-left, 15px, 60px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 25px, 55px);
+}
+.icon {
+  @include fluid(width, 10px, 15px);
+  @include fluid(height, 10px, 15px);
+  object-fit: contain;
+  @include fluid(margin-right, 10px, 15px);
+}
+.itemCon {
+  width: 100%;
+}
+.result {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.input {
+  font-family: "Cera Pro";
+  background: none;
+  border: none;
+  @include fluid(font-size, 10px, 12px);
+  color: #6d6d6d;
+  width: 80%;
+  outline: none;
+  &:active {
+    border: none;
+  }
+}
+.null {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include fluid(font-size, 22px, 28px);
+  font-weight: 600;
+  @include fluid(padding-top, 40px, 80px);
+  @include fluid(padding-bottom, 40px, 80px);
+}
+.container {
+  @include container;
+  background: rgba(91, 91, 91, 0.2);
+  border: 1px solid #545454;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  @include fluid(padding, 30px, 60px);
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  border-radius: 15px;
+}
+.wrapper {
+  display: flex;
+  width: 30%;
+  margin-right: 5%;
+  align-items: center;
+  @include fluid(padding-top, 15px, 30px);
+  @include fluid(padding-bottom, 15px, 30px);
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(padding-right, 10px, 20px);
+  background: #2d2d2d;
+  border-radius: 15px;
+  justify-content: space-between;
+  box-shadow: 0px 7px 12px 7px rgba(0, 0, 0, 0);
+  transition: margin-top 0.38s ease-in-out, box-shadow 0.38s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    margin-top: -5px;
+    box-shadow: 0px 7px 12px 7px rgba(0, 0, 0, 0.25);
+  }
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+.title {
+  @include fluid(font-size, 12px, 14px);
+  color: #fff;
+}
+@media screen and(max-width:768px) {
+  .result {
+    justify-content: space-between;
+  }
+  .input {
+    font-size: 14px;
+  }
+  .icon {
+    width: 15px;
+    height: 15px;
+  }
+  .containerSearch {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .container {
+    padding: 15px;
+  }
+}

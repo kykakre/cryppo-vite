@@ -1,0 +1,114 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  max-width: 1400px;
+  @include fluid(margin-bottom, 70px, 190px);
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  @include fluid(padding-top, 20px, 40px);
+  @include fluid(padding-bottom, 20px, 40px);
+  @include neumorphism;
+  border: none;
+}
+.block {
+  width: 16.5%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: 0.38s linear;
+  @include fluid(margin-right, 10px, 15px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-right, 10px, 15px);
+  @include fluid(padding-top, 15px, 25px);
+  @include fluid(padding-bottom, 15px, 25px);
+  @include neumorphism;
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+  &:hover {
+    background: rgba(188, 47, 255, 0.5);
+    .wrapper {
+      background: rgba(188, 47, 255, 1);
+    }
+  }
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  @include fluid(margin-right, 35px, 70px);
+  span {
+    color: #2f69ff;
+  }
+}
+
+.item {
+  position: relative;
+  z-index: 2;
+}
+.wrapper {
+  background: rgba(109, 109, 109, 0.5);
+  border-radius: 50%;
+  margin-bottom: 10px;
+  transition: 0.38s ease-in-out;
+  @include fluid(width, 40px, 52px);
+  @include fluid(height, 40px, 52px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    object-fit: contain;
+    @include fluid(width, 18px, 22px);
+    @include fluid(height, 18px, 22px);
+  }
+}
+.title {
+  font-weight: bold;
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.text {
+  @include fluid(font-size, 11px, 13px);
+}
+@media screen and (max-width: 992px) {
+  .flex {
+    background: none;
+    box-shadow: none;
+    border: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .block {
+    width: 48%;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin-right: 0;
+  }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subtitle {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .conatiner {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .block {
+    width: 100%;
+  }
+  .text {
+    text-align: center;
+  }
+}

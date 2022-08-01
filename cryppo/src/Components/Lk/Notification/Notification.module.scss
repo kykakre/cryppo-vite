@@ -1,0 +1,147 @@
+@import "../../../Style/Mixins.scss";
+
+.content {
+  @include fluid(margin-top, 20px, 40px);
+  border: 1px solid #545454;
+  backdrop-filter: blur(100px);
+  border-radius: 15px;
+  @include fluid(padding, 20px, 40px);
+  width: 70%;
+  @include fluid(margin-bottom, 25px, 50px);
+}
+.title {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  transition: 0.38s ease-in-out;
+}
+.text {
+  font-family: "Cera Pro";
+  font-size: 12px;
+  color: #fff;
+  margin-bottom: 15px;
+  transition: 0.38s ease-in-out;
+}
+.pushName {
+  border-radius: 76px;
+  padding: 6px 20px;
+  width: 50%;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.38s ease-in-out;
+}
+.pushItem {
+  width: 50%;
+  padding-right: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+.pushLabel {
+  position: relative;
+  margin-right: 50px;
+  margin-bottom: 0;
+  cursor: pointer;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.38s ease-in-out;
+    background: #808080;
+    margin-right: 30px;
+    box-shadow: 0px 0px 0px 3px rgba(158, 158, 158, 0.3);
+  }
+}
+.pushText {
+  padding-left: 25px;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.38s ease-in-out;
+}
+.pushItem input:checked + .pushLabel::before {
+  background: linear-gradient(122.76deg, #40ffe8 0%, #d5ff2f 92.55%);
+  box-shadow: 0px 0px 0px 3px rgba(213, 255, 47, 0.3);
+}
+.pushItem input {
+  display: none;
+}
+.pushContainer {
+  border-radius: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  transition: 0.38s ease-in-out;
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    transition: 0.38s ease-in-out;
+    content: "";
+    background: linear-gradient(
+      90deg,
+      rgba(45, 45, 45, 0.8) 0%,
+      rgba(45, 45, 45, 0) 100%
+    );
+    z-index: -1;
+    border-radius: 15px;
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+}
+.btn {
+  border: none;
+  border-radius: 12px;
+  background: $purpleGradient;
+  width: 50%;
+  cursor: pointer;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-top, 15px, 30px);
+  background-size: 100% 100%;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    background-size: 150% 100%;
+  }
+}
+@media screen and(max-width:768px) {
+  .content {
+    width: 100%;
+  }
+}
+@media screen and(max-width:576px) {
+  .pushContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .pushName {
+    width: 100%;
+    text-align: center;
+  }
+  .pushItem {
+    width: 100%;
+    justify-content: center;
+    padding-right: 0;
+  }
+  .btn {
+    width: 100%;
+  }
+}

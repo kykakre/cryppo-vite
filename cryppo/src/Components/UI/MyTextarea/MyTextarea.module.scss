@@ -1,0 +1,5 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include fluid(margin-bottom, 5px, 10px);
+}

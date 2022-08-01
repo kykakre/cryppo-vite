@@ -1,0 +1,48 @@
+@import "../../../Style/Mixins.scss";
+.linkItem {
+  text-decoration: underline !important;
+  color: #bdbdbd !important;
+  @include fluid(font-size, 12px, 14px);
+  @include fluid(margin-right, 15px, 30px);
+  transition: 0.38s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    color: $green !important;
+  }
+}
+.container {
+  background: #2d2d2d;
+  border-radius: 12px;
+  @include fluid(padding, 20px, 40px);
+  position: relative;
+}
+.title {
+  @include fluid(font-size, 18px, 22px);
+  text-align: center;
+  @include fluid(margin-bottom, 20px, 30px);
+  font-weight: 500;
+}
+.subtitle {
+  @include fluid(font-size, 14px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+  @include fluid(margin-top, 10px, 15px);
+}
+.btn {
+  border: none;
+  border-radius: 12px;
+  background: $purpleGradient;
+  width: 100%;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-top, 30px, 40px);
+  cursor: pointer;
+}
+.close {
+  @include fluid(width, 10px, 20px);
+  @include fluid(height, 10px, 20px);
+  object-fit: contain;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}

@@ -1,0 +1,52 @@
+@import "../../../Style/Mixins.scss";
+
+.item {
+  @include fluid(margin-bottom, 10px, 15px);
+}
+.title {
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.container {
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.option {
+  width: 100%;
+}
+.itemOption {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    @include fluid(height, 18px, 22px);
+    @include fluid(width, 18px, 22px);
+    @include fluid(margin-right, 5px, 10px);
+  }
+}
+.dropdown {
+  @include fluid(padding-left, 2px, 5px);
+  @include fluid(padding-right, 2px, 5px);
+}
+.select {
+  width: 100%;
+  background: #2d2d2d;
+  border-radius: 76px;
+
+  div {
+    border-radius: 76px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+  }
+}
+.input{
+  width: 100%;
+  border: 1px solid #424242;
+  border-radius: 76px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  height:44px;
+  color: #fff;
+  background: rgba(91, 91, 91, 0.2);
+  outline: none;}

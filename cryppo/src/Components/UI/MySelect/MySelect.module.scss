@@ -1,0 +1,56 @@
+@import "../../../Style/Mixins.scss";
+
+.container {
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.select {
+  width: 100%;
+  background: #2d2d2d;
+  border-radius: 76px;
+  div {
+    
+    span {
+      &:after {
+        content: none !important;
+      }
+    }
+  }
+}
+.option {
+  width: 100%;
+}
+.ant-select-single .ant-select-selector .ant-select-selection-item::after {
+  display: none !important;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  line-height: 10px;
+  height: 100%;
+}
+.textBig {
+  @include fluid(font-size, 10px, 12px);
+}
+.text {
+  @include fluid(font-size, 8px, 9px);
+  padding-top: 0;
+  padding-bottom: 0;
+  color:#6D6D6D;
+}
+.item {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  @include fluid(margin-right, 15px, 25px);
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    @include fluid(height, 18px, 22px);
+    @include fluid(width, 18px, 22px);
+    @include fluid(margin-right, 5px, 10px);
+  }
+}
+.dropdown {
+  @include fluid(padding-left, 2px, 5px);
+  @include fluid(padding-right, 2px, 5px);
+}

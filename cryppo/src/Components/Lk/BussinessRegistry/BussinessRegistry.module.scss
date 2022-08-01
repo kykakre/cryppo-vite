@@ -1,0 +1,176 @@
+@import "../../../Style/Mixins.scss";
+
+.entance {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  @include fluid(margin-bottom, 15px, 30px);
+}
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include fluid(width, 350px, 400px);
+}
+.input {
+  @include fluid(margin, 10px, 15px);
+}
+.button {
+  @include fluid(font-size, 16px, 18px);
+  border: none;
+  background: $purpleGradient;
+  @include fluid(margin-top, 20px, 35px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 5px, 10px);
+  @include fluid(padding-bottom, 5px, 10px);
+  border-radius: 15px;
+  @include fluid(margin-bottom, 10px, 15px);
+  cursor: pointer;
+}
+.tab {
+  list-style: none;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-top, 3px, 5px);
+  @include fluid(padding-bottom, 3px, 5px);
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: 0.38s linear;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    background: $purpleGradient;
+  }
+  div {
+    @include fluid(font-size, 10px, 12px);
+    color: #6d6d6d;
+    transition: 0.38s ease-in-out;
+    position: relative;
+    z-index: 1;
+  }
+}
+.list {
+  display: flex;
+  border: 1px solid #6d6d6d;
+  width: fit-content;
+  border-radius: 1000px;
+  @include fluid(padding-left, 10px, 20px);
+  @include fluid(padding-right, 10px, 20px);
+  @include fluid(padding-top, 5px, 10px);
+  @include fluid(padding-bottom, 5px, 10px);
+}
+.activeTab {
+  &::before {
+    opacity: 1;
+    width: 100%;
+  }
+  div {
+    color: #ffffff;
+  }
+}
+.tabs {
+  @include fluid(padding, 20px, 45px);
+  background: rgba(91, 91, 91, 0.2);
+  border-radius: 15px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tabsItem {
+  marker: none;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  @include fluid(pudding, 10px, 15px);
+  border-radius: 15px;
+  width: 75%;
+  justify-content: space-between;
+}
+.tabsText {
+  marker: none;
+  background: #2d2d2d;
+  border-radius: 15px;
+  @include fluid(margin-right, 10px, 20px);
+  @include fluid(margin, 5px, 10px);
+  @include fluid(padding, 10px, 15px);
+  list-style-type: none;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.text {
+  @include fluid(margin-top, 10px, 15px);
+  @include fluid(margin-bottom, 10, 15px);
+  @include fluid(font-size, 12px, 14px);
+  color: #6d6d6d;
+  span {
+    color: #2f69ff;
+  }
+}
+.none {
+  display: none;
+}
+.title {
+  @include fluid(font-size, 18px, 22px);
+  text-align: center;
+  @include fluid(margin-bottom, 20px, 30px);
+  font-weight: 500;
+}
+
+.btn {
+  border: none;
+  border-radius: 12px;
+  background: $purpleGradient;
+  width: 100%;
+  cursor: pointer;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-top, 15px, 30px);
+}
+.codeBtn {
+  border: none;
+  border-radius: 12px;
+  background: #bdbdbd;
+  width: 100%;
+  cursor: pointer;
+  @include fluid(padding-top, 10px, 15px);
+  @include fluid(padding-bottom, 10px, 15px);
+  @include fluid(margin-top, 15px, 30px);
+}
+
+.input {
+  background: #2c2c2c;
+  border-radius: 10px;
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(padding-left, 10px, 15px);
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(font-size, 12px, 16px);
+  @include fluid(margin-bottom, 10px, 15px);
+}
+@media screen and (max-width: 768px) {
+  .tabs {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .tabs {
+    width: 100%;
+  }
+  .modal {
+    width: 100%;
+  }
+}

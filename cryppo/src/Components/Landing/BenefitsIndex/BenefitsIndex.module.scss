@@ -1,0 +1,118 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  @include fluid(margin-bottom, 70px, 170px);
+  position: relative;
+}
+.parallax {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: -60%;
+  transform: translate(-50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(47, 105, 255, 0.4) 0%,
+    rgba(47, 105, 255, 0) 100%
+  );
+  width: 100%;
+  @include fluid(height, 500px, 1000px);
+}
+.block {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.subtitle {
+  @include fluid(font-size, 28px, 32px);
+  line-height: 150%;
+  font-family: "Days One", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  span {
+    color: #2f69ff;
+  }
+}
+.wrapper {
+  @include fluid(width, 35px, 55px);
+  @include fluid(height, 35px, 55px);
+  background: #6d6d6d;
+  transition: 0.38s ease-in-out;
+  @include fluid(margin-bottom, 15px, 30px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    z-index: 3;
+    @include fluid(width, 15px, 25px);
+    @include fluid(height, 15px, 25px);
+
+    object-fit: contain;
+  }
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include fluid(padding-top, 20px, 45px);
+  @include fluid(padding-left, 15px, 30px);
+  @include fluid(padding-right, 15px, 30px);
+  @include fluid(padding-bottom, 20px, 45px);
+  width: 23%;
+  position: relative;
+  z-index: 2;
+  @include neumorphism;
+  &::before {
+    content: "";
+    position: absolute;
+    background: rgba(47, 105, 255, 0.5);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 35px;
+    transition: 0.38s ease-in-out;
+  }
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+    .wrapper {
+      background: #2f69ff;
+    }
+  }
+}
+
+.text {
+  z-index: 3;
+  @include fluid(font-size, 14px, 16px);
+  color: #fff;
+  line-height: 150%;
+}
+@media screen and (max-width: 992px) {
+  .block {
+    flex-wrap: wrap;
+  }
+  .item {
+    width: 48%;
+    margin-bottom: 15px;
+  }
+  .parallax {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .item {
+    width: 100%;
+  }
+}

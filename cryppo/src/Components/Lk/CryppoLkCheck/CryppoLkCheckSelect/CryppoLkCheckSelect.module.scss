@@ -1,0 +1,36 @@
+@import "../../../../Style/Mixins.scss";
+.ant-dropdown-open {
+  .item {
+    .dropdown {
+      transform: rotate(180deg);
+    }
+  }
+}
+.item {
+  display: flex;
+  align-items: center;
+  @include fluid(margin-bottom, 15px, 20px);
+}
+.icon {
+  @include fluid(width, 30px, 46px);
+  @include fluid(height, 30px, 46px);
+  object-fit: contain;
+  @include fluid(margin-right, 10px, 12px);
+}
+.text {
+  font-family: "Days One", sans-serif;
+  @include fluid(font-size, 18px, 24px);
+  font-weight: 600;
+  line-height: 79%;
+  letter-spacing: 0.02em;
+}
+.body {
+  width: 370px;
+}
+.dropdown {
+  background: url("../../../../Images/icon/dropdown.svg") no-repeat;
+  @include fluid(width, 8px, 10px);
+  @include fluid(height, 8px, 10px);
+  background-size: contain;
+  @include fluid(margin-left, 10px, 12px);
+}

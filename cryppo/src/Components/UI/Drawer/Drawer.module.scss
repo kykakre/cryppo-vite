@@ -1,0 +1,112 @@
+@import "../../../Style/Mixins";
+
+.subtitle {
+  text-align: center;
+  @include fluid(font-size, 12px, 14px);
+  margin-bottom: 16px;
+}
+.title {
+  @include fluid(font-size, 14px, 18px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.header {
+  @include fluid(padding, 16px, 24px);
+  border-bottom: 1px solid #303030;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.block {
+  display: flex;
+  align-items: center;
+  @include fluid(padding, 14px, 24px);
+}
+.img {
+  @include fluid(margin-right, 15px, 30px);
+  @include fluid(width, 60px, 80px);
+  @include fluid(height, 60px, 80px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+.name {
+  @include fluid(font-size, 14px, 18px);
+  margin-bottom: 5px;
+}
+.out {
+  background: $purpleGradient;
+  color: #fff;
+  background-size: 100% 100%;
+  cursor: pointer;
+  @include fluid(padding-left, 3px, 5px);
+  @include fluid(padding-right, 3px, 5px);
+  @include fluid(padding-top, 2px, 3px);
+  @include fluid(padding-bottom, 2px, 3px);
+  transition: 0.38s ease-in-out;
+  border-radius: 5px;
+  &:hover {
+    background-size: 150% 100%;
+  }
+}
+.link {
+  display: block;
+  @include fluid(padding-top, 5px, 10px);
+  @include fluid(padding-bottom, 5px, 10px);
+  @include fluid(padding-right, 5px, 10px);
+  padding-left: 30px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transition: 0.38s ease-in-out;
+    background: linear-gradient(
+      91.42deg,
+      rgba(47, 105, 255, 0.21) 0%,
+      rgba(188, 47, 255, 0) 100%
+    );
+  }
+  &:hover {
+    &::before {
+      width: 100%;
+    }
+  }
+}
+.linkMobile {
+  display: none;
+}
+.active {
+  &::before {
+    width: 100%;
+  }
+}
+.balanse {
+  @include fluid(padding-top, 10px, 16px);
+  @include fluid(padding-bottom, 10px, 16px);
+  @include fluid(margin-top, 10px, 16px);
+  border-top: 1px solid #303030;
+  border-bottom: 1px solid #303030;
+}
+.alerts {
+  @include fluid(padding-top, 10px, 16px);
+}
+.close {
+  font-size: 20px;
+  @include fluid(margin-right, 20px, 38px);
+  opacity: 0.8;
+  transition: 0.38s ease-in-out;
+  &:hover {
+    opacity: 1;
+  }
+}
+@media screen and(max-width:992px) {
+  .linkMobile {
+    display: block;
+  }
+}

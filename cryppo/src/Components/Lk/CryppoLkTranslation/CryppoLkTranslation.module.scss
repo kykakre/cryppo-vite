@@ -1,0 +1,8 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  @include fluid(padding-top, 100px, 180px);
+  @include fluid(padding-bottom, 100px, 160px);
+  transition: 0.38s ease-in-out;
+}

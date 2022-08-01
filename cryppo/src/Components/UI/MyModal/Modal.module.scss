@@ -1,0 +1,26 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include fluid(width, 320px, 600px);
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.25);
+  @include fluid(padding-top, 25px, 50px);
+  @include fluid(padding-bottom, 25px, 50px);
+  @include fluid(padding-left, 20px, 40px);
+  @include fluid(padding-right, 20px, 40px);
+  background: rgba(91, 91, 91, 0.2);
+}
+.modalWrapper {
+  outline: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  // width: 100%;
+  // height: 100%;
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+}

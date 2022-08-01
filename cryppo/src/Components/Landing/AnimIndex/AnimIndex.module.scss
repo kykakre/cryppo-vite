@@ -1,0 +1,48 @@
+@import '../../../Style/Mixins';
+
+.center {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(170, 184, 227, 0.5);
+    color: #8eccdf;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #4bdfea;
+    font-size: 90px;
+    font-weight: bold;
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(75, 223, 234, 0.5);
+    transition: 0.38s ease-in-out;
+    animation: shadow 2s infinite linear;
+    transition: 0.38s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+        color: #4bdfea;
+        -webkit-text-stroke-color: #8eccdf;
+    }
+}
+
+.atom {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    border-radius: 50%;
+    background: rgba(170, 184, 227, 0.5);
+    backdrop-filter: blur(1px);
+    border: 1px solid rgba(75, 223, 234, 0.5);
+}
+@keyframes shadow {
+    0% {
+        box-shadow: 0px 0px 8px 0px rgba(75, 223, 234, 0);
+    }
+    50% {
+        box-shadow: 0px 0px 50px 0px rgba(75, 223, 234, 0.5);
+    }
+    100% {
+        box-shadow: 0px 0px 8px 0px rgba(75, 223, 234, 0);
+    }
+}

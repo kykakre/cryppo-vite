@@ -1,0 +1,43 @@
+@import '../../../Style/Mixins.scss';
+
+.container {
+    @include neumorphism;
+    @include fluid(padding, 20px, 40px);
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include fluid(margin-bottom, 10px, 20px);
+    border-radius: 5px;
+    @include fluid(padding-top, 10px, 20px);
+    @include fluid(padding-bottom, 10px, 20px);
+    @include fluid(padding-left, 5px, 10px);
+    @include fluid(padding-right, 5px, 10px);
+}
+.item[data-history='error'] {
+    background: $redGradient;
+}
+.item[data-history='completed'] {
+    background: $blueGradient;
+}
+.item[data-history='wait'] {
+    background: #2d2d2d;
+}
+.code {
+    @include fluid(font-size, 8px, 10px);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 70%;
+}
+.cash {
+    @include fluid(font-size, 10px, 12px);
+}
+.date {
+    @include fluid(font-size, 10px, 12px);
+    @include fluid(margin-bottom, 3px, 5px);
+}
+.status {
+    @include fluid(font-size, 10px, 12px);
+    @include fluid(margin-bottom, 3px, 5px);
+}

@@ -1,0 +1,113 @@
+@import "../../../Style/Mixins";
+
+.container {
+  @include container;
+  @include fluid(margin-bottom, 70px, 170px);
+  position: relative;
+}
+.parallax {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: -100%;
+  transform: translate(-50%);
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(47, 105, 255, 0.5) 0%,
+    rgba(47, 105, 255, 0) 100%
+  );
+  @include fluid(width, 1000px, 2000px);
+  @include fluid(height, 1000px, 2000px);
+}
+.block {
+  @include neumorphism;
+  @include fluid(padding-top, 30px, 60px);
+  @include fluid(padding-bottom, 30px, 60px);
+  @include fluid(padding-left, 80px, 180px);
+  @include fluid(padding-right, 80px, 180px);
+  background: rgba(91, 91, 91, 0.2);
+  border: 1px solid #545454;
+  box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(100px);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.title {
+  font-weight: 500;
+  text-align: center;
+  @include fluid(font-size, 16px, 18px);
+  @include fluid(margin-bottom, 30px, 50px);
+  text-transform: uppercase;
+}
+.description {
+  font-family: "Cera Pro";
+  font-weight: 400;
+  @include fluid(font-size, 24px, 36px);
+  @include fluid(line-height, 36px, 45px);
+  text-align: center;
+  @include fluid(margin-bottom, 35px, 70px);
+  @include fluid(line-height, 25px, 45px);
+}
+.number {
+  color: $blue;
+  font-weight: 700;
+  @include fluid(font-size, 26px, 36px);
+  @include fluid(line-height, 36px, 45px);
+  @include fluid(margin-bottom, 8px, 10px);
+}
+.text {
+  color: #6d6d6d;
+  @include fluid(font-size, 16px, 18px);
+  text-align: center;
+  line-height: 145%;
+  flex-grow: 1;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 992px) {
+  .block {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .item {
+    width: 46%;
+    margin-bottom: 10px;
+  }
+  .flex {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .parallax {
+    display: none;
+  }
+}
+@media screen and(max-width:768px) {
+  .container {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .block {
+    padding: 5px;
+  }
+  .title {
+    margin-top: 20px;
+  }
+  .description {
+    font-size: 15px;
+  }
+  .item {
+    width: 100%;
+  }
+}

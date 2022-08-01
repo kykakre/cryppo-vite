@@ -1,0 +1,43 @@
+@import "../../../Style/Mixins";
+
+.link {
+  cursor: pointer;
+  position: relative;
+  transition: 0.38s linear;
+  @include fluid(margin-right, 30px, 90px);
+  @include fluid(font-size, 14px, 16px);
+  // &:hover {
+  //     color: $green;
+  // }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 1s ease-in-out;
+    background: $purpleGradient;
+    width: 0;
+    opacity: 0;
+    border-radius: 3px;
+    @include fluid(bottom, -10px, -15px);
+    @include fluid(height, 3px, 5px);
+  }
+  // &:last-child {
+  //     margin-right: 0;
+  // }
+}
+
+.active {
+  position: relative;
+  &::after {
+    width: 50%;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 992px) {
+  .link {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 30px;
+  }
+}

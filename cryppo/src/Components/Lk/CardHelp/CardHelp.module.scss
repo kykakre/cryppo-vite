@@ -1,0 +1,61 @@
+@import "../../../Style/Mixins.scss";
+
+.card {
+  background: #1b1b1b;
+  border-radius: 15px;
+  padding: 20px;
+}
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #2d2d2d;
+  border-radius: 5px;
+  @include fluid(padding-top, 10px, 20px);
+  @include fluid(padding-bottom, 10px, 20px);
+  @include fluid(padding-left, 15px, 25px);
+  @include fluid(padding-right, 15px, 25px);
+  @include fluid(margin-bottom, 5px, 10px);
+}
+.number {
+  @include fluid(font-size, 12px, 14px);
+}
+.country {
+  @include fluid(font-size, 12px, 14px);
+}
+.item {
+  display: flex;
+  align-items: center;
+}
+.flag {
+  @include fluid(margin-right, 10px, 20px);
+}
+.title {
+  @include fluid(font-size, 14px, 18px);
+  @include fluid(margin-bottom, 10px, 15px);
+  letter-spacing: 0.02px;
+}
+.text {
+  @include fluid(font-size, 8px, 10px);
+  color: #bdbdbd;
+  @include fluid(margin-bottom, 25px, 50px);
+}
+@media screen and (max-width: 992px) {
+  .tab {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .item {
+    margin-bottom: 10px;
+  }
+  .flag {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
