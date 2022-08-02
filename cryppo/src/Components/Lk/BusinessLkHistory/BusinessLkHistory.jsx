@@ -54,7 +54,7 @@ export default function BusinessLkHistory(props) {
   }, [currency, dateRange, walletAddress, pageSize, pageNumber, props]);
   return (
     <div className="main container">
-      <div className="flex ">
+      <div className="flex margin">
         <div className="sidebar">
           <div className="sidebar__inner">
             <SubtitleLk arrow={false} subtitle="Фильтр" />

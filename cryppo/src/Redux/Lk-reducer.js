@@ -489,6 +489,38 @@ let initialState = {
       poveredIcon: qron,
       href: "pageWork",
     },
+    translationsData: [
+      {
+        id: 1,
+        icon: gipo,
+        title: "По номеру телефона",
+      },
+      {
+        id: 2,
+        icon: gipo,
+        title: "По номеру карты",
+      },
+      {
+        id: 3,
+        icon: gipo,
+        title: "По реквизитам",
+      },
+      {
+        id: 4,
+        icon: gipo,
+        title: "Между своими счетами",
+      },
+      {
+        id: 5,
+        icon: gipo,
+        title: "По номеру карты",
+      },
+      {
+        id: 6,
+        icon: gipo,
+        title: "По реквизитам",
+      },
+    ],
     isModal: false,
     tabsData: {
       invest: {
@@ -521,11 +553,23 @@ let initialState = {
         title: "Текущая стоимость индекса",
         cash: "$ 28.84",
       },
-
       buyNow: {
         id: 1,
         icon: plus,
         title: "Купить индекс",
+      },
+      volumeIndex: {
+        id: 1,
+        icon: index,
+        title: "Текущая стоимость индекса",
+        cash: "$ 28.84",
+      },
+      indexProfit: {
+        id: 1,
+        icon: bag,
+        title: "Объем вашего индекса",
+        statistic: "0.00000000 TOP8",
+        cash: "$ 0.00",
       },
     },
     operationModal: {
@@ -550,6 +594,51 @@ let initialState = {
         text: null,
       },
     },
+    newsData: [
+      { id: 1, text: "Ваши траты за месяц", img: calculate },
+      { id: 2, text: "Аналитика", img: analitica },
+      { id: 3, text: "Криптокарта", img: cryptocard },
+      { id: 4, text: "Криптокарта", img: cryptocard2 },
+      { id: 5, text: "Криптокарта", img: cryptocard },
+    ],
+    tableData: [],
+    tableColumns: [
+      {
+        title: "ID транзакции",
+        dataIndex: "transaction",
+        key: "transaction",
+      },
+      {
+        title: "Дата",
+        dataIndex: "date",
+        key: "date",
+      },
+      {
+        title: "Сумма",
+        dataIndex: "sum",
+        key: "sum",
+      },
+      {
+        title: "Комиссия",
+        dataIndex: "comission",
+        key: "comission",
+      },
+      {
+        title: "Валюта",
+        dataIndex: "valute",
+        key: "valute",
+      },
+      {
+        title: "Направление",
+        dataIndex: "move",
+        key: "move",
+      },
+      {
+        title: "Статус",
+        dataIndex: "status",
+        key: "status",
+      },
+    ],
   },
 };
 const LkReducer = (state = initialState, action) => {

@@ -65,11 +65,10 @@
   top: 22%;
   transform: translate(-50%, -50%);
 }
-.navigation {
+.navigathion {
   display: flex;
   align-items: center;
-  position: absolute;
-  right: 0;
+  justify-content: space-between;
 }
 .subtitle {
   @include fluid(font-size, 28px, 32px);

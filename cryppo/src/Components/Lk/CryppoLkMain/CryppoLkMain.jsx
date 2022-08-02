@@ -10,7 +10,7 @@ import SubtitleLk from "../../UI/SubtitleLk/SubtitleLk";
 export default function CryppoLkMain(props) {
   return (
     <>
-      <div className="flex container">
+      <div className="flex container margin">
         <div className="sidebar">
           <div className="sidebar__inner">
             <SubtitleLk arrow={false} subtitle="Счета и карты" />

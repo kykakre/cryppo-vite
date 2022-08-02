@@ -22,7 +22,7 @@
 }
 .link {
   display: block;
-  margin-top: 45px;
+  margin-top: 20px;
 }
 .icon {
   object-fit: contain;
@@ -36,9 +36,9 @@
 .title {
   @include fluid(font-size, 12px, 16px);
   @include fluid(margin-bottom, 10px, 15px);
-  // &:last-child {
-  //   margin-bottom: 0;
-  // }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 .subtitle {
   @include fluid(font-size, 16px, 28px);

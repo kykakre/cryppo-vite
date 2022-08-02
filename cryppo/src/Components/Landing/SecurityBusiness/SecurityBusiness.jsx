@@ -18,9 +18,9 @@ export default function SecurityBusiness(props) {
   ));
   return (
     <div className={style.container}>
-      <Subtitle
-        className={style.subtitle}
-      >Безопасность для вас и ваших клиентов<span>.</span></Subtitle>
+      <Subtitle className={style.subtitle}>
+        Безопасность для вас и ваших клиентов<span>.</span>
+      </Subtitle>
       <div className={style.flex}>
         <div className={style.animate}>
           <div className={style.animateImg}>
@@ -43,9 +43,11 @@ export default function SecurityBusiness(props) {
           >
             {elementItem}
           </Swiper>
-          <div className="dotE"></div>
+          <div className={style.navigathion}>
+            <div className="dotE"></div>
             <div className="prevE"></div>
             <div className="nextE"></div>
+          </div>
         </div>
       </div>
     </div>

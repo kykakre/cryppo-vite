@@ -138,7 +138,10 @@ input[type="number"] {
 .flex {
     display: flex;
     justify-content: space-between;
+}
+.margin{
     @include fluid(margin-bottom, 30px, 110px);
+
 }
 .sidebar {
     width: 30%;
@@ -359,7 +362,7 @@ a {
     @include fluid(height, 15px, 22px);
     background: url("../Images/icon/sec-next.svg") no-repeat;
     background-size: contain;
-    position: absolute;
+    background-position:center;
     right: 0px;
     top: 0;
     z-index: 3;
@@ -370,8 +373,8 @@ a {
     @include fluid(height, 15px, 22px);
     background: url("../Images/icon/sec-prev.svg") no-repeat;
     background-size: contain;
-    position: absolute;
-    right: 25px;
+    background-position:center;
+
     top: 0;
     z-index: 3;
     @include fluid(margin-right, 5px, 10px);
@@ -497,6 +500,19 @@ a {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+}
+.ant-table{
+    background:none !important;
+}
+.ant-table-cell{
+    padding:0 !important;
+    border-radius:0;
+    background:none !important;
+    border:none !important;
+    border-top-left-radius:0;
+    &::before{
+        display:none;
+    }
 }
 
 @media screen and(max-width:992px) {
