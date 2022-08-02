@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React, { useState , Children} from "react";
 import style from "./Check.module.scss";
 import CheckItem from "./CheckItem";
 import SubtitleLk from "../../UI/SubtitleLk/SubtitleLk";
 import CheckCardBlock from "./CheckCardBlock";
-import Btn from "./../../UI/Btn/Btn";
 import MyModal from "../../UI/MyModal/MyModal";
 import CheckModal from "./CheckModal";
 
-export default function Check(props) {
+export default function Check({children,...props}) {
   const [open, setOpen] = useState(false);
+  const [check,setCheck] =useState(false);
   function openModal() {
     setOpen(!open);
   }
@@ -23,18 +23,13 @@ export default function Check(props) {
       link={e.link}
     />
   ));
-
   return (
+
     <div className={style.containers}>
       <div className={style.block}>
         <div className={style.item}>{elementCard}</div>
-        {props.isBankCard !== false ? (
-          <CheckCardBlock bankCardList={props.bankCardList} />
-        ) : (
-          <Btn onClick={openModal} style={{ margin: "auto" }}>
-            Оставить заявку
-          </Btn>
-        )}
+          {children}
+
       </div>
       <MyModal setOpen={setOpen} open={open}>
         <CheckModal

@@ -35,7 +35,7 @@ const News = (props) => {
           slidesPerGroup: 4,
         }}
         breakpoints={{
-          420: { slidesPerView: 4, slidesPerGroup: 4 },
+          420: { slidesPerView: 4.02, slidesPerGroup: 4 },
           350: { slidesPerView: 3, slidesPerGroup: 3 },
         }}
         className={style.swiper}

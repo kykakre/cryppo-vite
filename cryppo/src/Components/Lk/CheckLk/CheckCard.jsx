@@ -7,7 +7,7 @@ export default function CheckCard(props) {
       <div className={style.cartLine}></div>
       <div className={style.cardDown}>
         <div className={style.number}>{props.number}</div>
-        <img src={props.logo} className={style.logo}></img>
+        <img src={props.logo} className={style.logo} alt="icon"></img>
       </div>
     </div>
   );

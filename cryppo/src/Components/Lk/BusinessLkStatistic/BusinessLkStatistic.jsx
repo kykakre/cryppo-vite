@@ -4,13 +4,14 @@ import Check from "../CheckLk/Check";
 import DoughnutChart from "../DoughnutChart/DoughnutChart";
 import CompositionIndex from "../CompositionIndex/CompositionIndex";
 import StatisticIndex from "../../Landing/StatisticIndex/StatisticIndex";
+import style from "./BusinessLkStatistic.module.scss";
 export default function LkStatistic(props) {
   const expenses = props.expenses.filter((e) => {
     if (e.parentCategory == undefined) return e;
   });
   return (
     <div className="main container">
-      <div className="flex margin">
+      <div className="flex ">
         <div className="sidebar">
           <div className="sidebar__inner">
             <SubtitleLk arrow={false} subtitle="Счета" />
@@ -41,11 +42,13 @@ export default function LkStatistic(props) {
           />
         </div>
       </div>
-      <SubtitleLk arrow={true} subtitle="Статистика поступлений" />
-      <StatisticIndex
-        ChartPostTC={props.ChartPostTC}
-        chartIndex={props.chartIndex}
-      />
+      <div className={style.block}>
+        <SubtitleLk arrow={false} subtitle="Статистика" />
+        <StatisticIndex
+          ChartPostTC={props.ChartPostTC}
+          chartIndex={props.chartIndex}
+        />
+      </div>
     </div>
   );
 }

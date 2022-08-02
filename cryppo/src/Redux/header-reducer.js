@@ -140,7 +140,7 @@ let initialState = {
 export const headerSlice = createSlice({
   name: "header",
   initialState,
-  reducers: { }
+  reducers: {},
 });
 
 export default headerSlice.reducer;

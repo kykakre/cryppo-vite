@@ -13,7 +13,7 @@ const Event = (props) => {
   if (category) defaultSearch.push(category);
   if (subcategory) defaultSearch.push(subcategory);
   return (
-    <>
+    <div className="margin">
       <SearchBar
         updateChart={props.updateChart}
         expenses={props.expenses}
@@ -41,7 +41,7 @@ const Event = (props) => {
           switchModal={props.switchModal}
         />
       </div>
-    </>
+    </div>
   );
 };
 

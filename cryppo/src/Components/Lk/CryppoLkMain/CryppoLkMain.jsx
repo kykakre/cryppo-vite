@@ -7,6 +7,7 @@ import News from "../News/News";
 import StatisticCash from "../StatisticCash/StatisticCash";
 import SidebarTabs from "../SidebarTabs/SidebarTabs";
 import SubtitleLk from "../../UI/SubtitleLk/SubtitleLk";
+import CheckCardBlock from "../CheckLk/CheckCardBlock.jsx";
 export default function CryppoLkMain(props) {
   return (
     <>
@@ -17,6 +18,7 @@ export default function CryppoLkMain(props) {
             <Check
               cardList={props.cardList}
               bankCardList={props.bankCardList}
+              children={<CheckCardBlock />}
             />
 
             <SidebarTabs tabs={props.tabs.invest} />
