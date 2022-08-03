@@ -5,21 +5,22 @@ import Check from "../../CheckLk/Check";
 import style from "./CryppoLkCheckSelect.module.scss";
 import CheckCardBlock from "../../CheckLk/CheckCardBlock.jsx";
 import {CheckCardMoney} from "../../CheckLk/CheckCardMoney";
+import CryppoLkCheckBody from "./CryppoLkCheckBody.jsx";
 
 export default function CryppoLkCheckSelect(props) {
+    const newArray = props.cardList.concat(props.bankCardList)
     return (
         <Dropdown
             overlay={
                 <div className={style.body}>
-                    <Check setCheck={true} cardList={props.cardList}>
-                        <CheckCardMoney bankCardList={props.bankCardList}/>
-                    </Check>
+                    <CryppoLkCheckBody cardList={props.cardList} setFunc={props.setFunc}
+                                       bankCardList={props.bankCardList}/>
                 </div>
             }
             trigger={["click"]}
         >
             <a onClick={(e) => e.preventDefault()}>
-                <CryppoLkCheckActive {...props.cardList[0]} />
+                <CryppoLkCheckActive {...newArray[props.slider]}/>
             </a>
         </Dropdown>
     );

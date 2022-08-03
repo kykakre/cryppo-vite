@@ -241,19 +241,7 @@ let initialState = {
                 value: "en",
             },
         ],
-        bankCardList: [
-            {
-                id: 1,
-                number: 5678,
-                count: 1000,
-                logo: masterCard,
-            },
-            {
-                id: 2,
-                number: 7658,
-                logo: visa,
-            },
-        ],
+
     },
     cryppo: {
         accessToken: "",
@@ -361,14 +349,14 @@ let initialState = {
         ],
         bankCardList: [
             {
-                id: 1,
+                id: 5,
                 number: 5678,
                 count: "1.000",
                 logo: masterCard,
                 link: "check",
             },
             {
-                id: 2,
+                id: 6,
                 number: 7658,
                 count: 500,
                 logo: visa,

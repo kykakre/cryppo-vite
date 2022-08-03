@@ -188,7 +188,7 @@ const initialState = {
             disable: false,
         },
         {
-            s
+            
             id: 2,
             category: "Перевод",
             cash: 4.56,
